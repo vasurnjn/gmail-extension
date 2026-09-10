@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Intelligent Gmail Attention Manager",
+  "version": "1.0.0",
+  "description": "Privacy-first attention manager for important Gmail communications, deadlines, and actions.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "identity",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://gmail.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "275854411753-pk8m1leiggd6vtaj81jbr5kh1akug413.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gmail Attention Manager",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

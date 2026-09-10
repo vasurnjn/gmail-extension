@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+
+# Logs & debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and sensitive keys
+.env
+.env.*
+*.local
+*.pem
+*.key
+
+# System artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.user
+
+# Test coverage
+coverage/
+.nyc_output/

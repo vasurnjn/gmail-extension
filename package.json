@@ -1,0 +1,37 @@
+{
+  "name": "intelligent-gmail-attention-manager",
+  "version": "1.0.0",
+  "description": "Privacy-first attention manager for important Gmail communications, deadlines, and actions.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "chrome-extension",
+    "gmail",
+    "attention-manager",
+    "privacy-first"
+  ],
+  "author": "Vasu Ranjan (https://github.com/vasurnjn)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasurnjn/gmail-extension.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dexie": "^4.4.6",
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/chrome": "^0.2.9",
+    "@types/node": "^26.5.1",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}
