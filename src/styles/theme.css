@@ -1,0 +1,218 @@
+:root,
+[data-theme="light"] {
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #f8fafc;
+
+  --border-subtle: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-subtle: #eff6ff;
+  --accent-text: #1d4ed8;
+
+  --success: #16a34a;
+  --success-subtle: #f0fdf4;
+  --success-text: #15803d;
+
+  --warning: #d97706;
+  --warning-subtle: #fffbeb;
+  --warning-text: #b45309;
+
+  --danger: #dc2626;
+  --danger-subtle: #fef2f2;
+  --danger-text: #b91c1c;
+
+  --badge-bg: #f1f5f9;
+  --badge-text: #475569;
+  --badge-border: #e2e8f0;
+
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg-app: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-raised: #1f2937;
+  --bg-surface-hover: #1b2434;
+
+  --border-subtle: #1e293b;
+  --border: #283548;
+  --border-strong: #3b4d66;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-subtle: #1e3a8a33;
+  --accent-text: #93c5fd;
+
+  --success: #22c55e;
+  --success-subtle: #14532d33;
+  --success-text: #86efac;
+
+  --warning: #f59e0b;
+  --warning-subtle: #78350f33;
+  --warning-text: #fde68a;
+
+  --danger: #ef4444;
+  --danger-subtle: #7f1d1d33;
+  --danger-text: #fca5a5;
+
+  --badge-bg: #1e293b;
+  --badge-text: #94a3b8;
+  --badge-border: #334155;
+
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* Base button reset & styling */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--bg-surface-raised);
+  border-color: var(--border-strong);
+}
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: var(--danger-subtle);
+  color: var(--danger-text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+/* Status pills */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.status-pill.connected {
+  background: var(--success-subtle);
+  color: var(--success-text);
+  border: 1px solid var(--success-subtle);
+}
+.status-pill.syncing {
+  background: var(--accent-subtle);
+  color: var(--accent-text);
+  border: 1px solid var(--accent-subtle);
+}
+.status-pill.not-connected {
+  background: var(--badge-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.status-pill.error {
+  background: var(--danger-subtle);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-subtle);
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
